@@ -12,6 +12,7 @@
 		6077969A28FD042A009B6477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6077969928FD042A009B6477 /* Assets.xcassets */; };
 		6077969D28FD042A009B6477 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6077969C28FD042A009B6477 /* Preview Assets.xcassets */; };
 		607796A528FD061A009B6477 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607796A428FD061A009B6477 /* PrimaryButton.swift */; };
+		607796A828FD0A05009B6477 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607796A728FD0A05009B6477 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		6077969928FD042A009B6477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6077969C28FD042A009B6477 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		607796A428FD061A009B6477 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		607796A728FD0A05009B6477 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,9 @@
 				607796A628FD06C2009B6477 /* Views */,
 				607796A328FD05FF009B6477 /* Components */,
 				6077969528FD0427009B6477 /* TriviaGameApp.swift */,
-				6077969728FD0428009B6477 /* ContentView.swift */,
 				6077969928FD042A009B6477 /* Assets.xcassets */,
 				6077969B28FD042A009B6477 /* Preview Content */,
+				607796A728FD0A05009B6477 /* Extensions.swift */,
 			);
 			path = TriviaGame;
 			sourceTree = "<group>";
@@ -82,6 +84,7 @@
 		607796A628FD06C2009B6477 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6077969728FD0428009B6477 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				607796A528FD061A009B6477 /* PrimaryButton.swift in Sources */,
 				6077969828FD0428009B6477 /* ContentView.swift in Sources */,
 				6077969628FD0427009B6477 /* TriviaGameApp.swift in Sources */,
+				607796A828FD0A05009B6477 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
