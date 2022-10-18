@@ -3,7 +3,7 @@
 //  TriviaGame
 //
 //  Created by marco rodriguez on 16/10/22.
-//  Continua at: 28:42 https://www.youtube.com/watch?v=b55npVkqa5U 
+//  Continua at: 41:12 https://www.youtube.com/watch?v=b55npVkqa5U 
 
 import SwiftUI
 
