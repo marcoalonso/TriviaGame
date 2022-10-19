@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var triviaManager: TriviaManager
     var body: some View {
         VStack (spacing: 50) {
             HStack {
@@ -18,25 +19,35 @@ struct QuestionView: View {
                 
                 Spacer()
                 
-                Text("#1 of 10")
+                Text("#\(triviaManager.index + 1) of \(triviaManager.lenght)")
                     .foregroundColor(Color("SecondaryColor"))
                     .fontWeight(.heavy)
             }
             
-            ProgressBar(progress: 40)
+            ProgressBar(progress: triviaManager.progress)
             
             VStack (alignment: .leading, spacing: 20) {
-                Text("Brazil is the country where there are more soccer players?")
+                Text(triviaManager.question)
                     .font(.system(size: 25))
                     .bold()
                     .foregroundColor(.black)
                 
-                AnswerRow(answer: Answer(text: "false", isCorrect:  true))
-                AnswerRow(answer: Answer(text: "true", isCorrect:  false))
+                ForEach(triviaManager.answerChoices, id: \.id) { answer in
+                    AnswerRow(answer: answer)
+                        .environmentObject(triviaManager)
+                    
+                }
                 
             }//Vstack
             
-            PrimaryButton(text: "Next".uppercased())
+            Button {
+                //Action
+                triviaManager.goToNextQuestion()
+            } label: {
+                PrimaryButton(text: "Next".uppercased(), background: triviaManager.answerSelected ? Color("AccentColor") : .gray)
+            }
+            .disabled(!triviaManager.answerSelected)
+            
             
             Spacer()
             
@@ -51,5 +62,6 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
         QuestionView()
+            .environmentObject(TriviaManager())
     }
 }
